@@ -14,3 +14,11 @@ d20
 d100
 
 It also allows for positive and negative modifiers and displays the total roll.  
+
+------------------------------------
+ChangeLog:
+
+v.02
+---------
+Added Logging feature for dice rolls and ability to delete log file.
+Added Clear Modifier button to clear all radio buttons and modifier fields
