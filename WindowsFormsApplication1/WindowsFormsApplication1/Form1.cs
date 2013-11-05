@@ -4,11 +4,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class mainWindow : Form
     {
         private string rollLog = getLoc.getLocation() + @"\" + @"\Logs\Rolls\" + logStrings.date + "rolls.txt";
 
-        public Form1()
+        public mainWindow()
         {
             InitializeComponent();
             string logLoc = getLoc.getLocation() + @"\" + @"\Logs\" + logStrings.date + ".txt";
@@ -49,7 +49,14 @@ namespace WindowsFormsApplication1
                         int roll = randomRoll.Next(1, 7);
                         int total1 = roll + modifier;
                         resultArea.Text += roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled a: ") + total1.ToString() + Environment.NewLine;
-                        File.AppendAllText(rollLog, roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + total1.ToString() + Environment.NewLine);
+                        try
+                        {
+                            File.AppendAllText(rollLog, roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + total1.ToString() + Environment.NewLine);
+                        }
+                        catch (Exception)
+                        {
+                            throw;
+                        }
                     }
                     else
                     {
@@ -64,7 +71,14 @@ namespace WindowsFormsApplication1
                                 int roll = randomRoll.Next(1, 7);
                                 int total1 = roll + modifier;
                                 resultArea.Text += roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled a: ") + total1.ToString() + Environment.NewLine;
-                                File.AppendAllText(rollLog, roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + total1.ToString() + Environment.NewLine);
+                                try
+                                {
+                                    File.AppendAllText(rollLog, roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + total1.ToString() + Environment.NewLine);
+                                }
+                                catch (Exception)
+                                {
+                                    throw;
+                                }
                             }
                         }
                         catch (Exception d6ModPlusExcept)
@@ -98,14 +112,28 @@ namespace WindowsFormsApplication1
                             string rollLog = getLoc.getLocation() + @"\" + @"\Logs\Rolls\" + logStrings.date + "rolls.txt";
                             int total2 = 0;
                             resultArea.Text += roll.ToString() + ("-") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled a: ") + total2.ToString() + Environment.NewLine;
-                            File.AppendAllText(rollLog, roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + total1.ToString() + Environment.NewLine);
+                            try
+                            {
+                                File.AppendAllText(rollLog, roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + total1.ToString() + Environment.NewLine);
+                            }
+                            catch (Exception)
+                            {
+                                throw;
+                            }
                         }
                         //Otherwise run this code
                         else
                         {
                             string rollLog = getLoc.getLocation() + @"\" + @"\Logs\Rolls\" + logStrings.date + "rolls.txt";
                             resultArea.Text += roll.ToString() + ("-") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled a: ") + total1.ToString() + Environment.NewLine;
-                            File.AppendAllText(rollLog, roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + total1.ToString() + Environment.NewLine);
+                            try
+                            {
+                                File.AppendAllText(rollLog, roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + total1.ToString() + Environment.NewLine);
+                            }
+                            catch (Exception)
+                            {
+                                throw;
+                            }
                         }
                     }
                     else
@@ -124,13 +152,27 @@ namespace WindowsFormsApplication1
                                     string rollLog = getLoc.getLocation() + @"\" + @"\Logs\Rolls\" + logStrings.date + "rolls.txt";
                                     int total2 = 0;
                                     resultArea.Text += roll.ToString() + ("-") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled a: ") + total2.ToString() + Environment.NewLine;
-                                    File.AppendAllText(rollLog, roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + total1.ToString() + Environment.NewLine);
+                                    try
+                                    {
+                                        File.AppendAllText(rollLog, roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + total1.ToString() + Environment.NewLine);
+                                    }
+                                    catch (Exception)
+                                    {
+                                        throw;
+                                    }
                                 }
                                 else
                                 {
                                     string rollLog = getLoc.getLocation() + @"\" + @"\Logs\Rolls\" + logStrings.date + "rolls.txt";
                                     resultArea.Text += roll.ToString() + ("-") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled a: ") + total1.ToString() + Environment.NewLine;
-                                    File.AppendAllText(rollLog, roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + total1.ToString() + Environment.NewLine);
+                                    try
+                                    {
+                                        File.AppendAllText(rollLog, roll.ToString() + ("+") + modifier.ToString() + ("=") + total1.ToString() + ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + total1.ToString() + Environment.NewLine);
+                                    }
+                                    catch (Exception)
+                                    {
+                                        throw;
+                                    }
                                 }
                             }
                         }
@@ -156,18 +198,31 @@ namespace WindowsFormsApplication1
                             Random d6Roll = new Random();
                             int roll = randomRoll.Next(1, 7);
                             resultArea.Text += ("You rolled a: ") + roll.ToString() + Environment.NewLine;
-                            File.AppendAllText(rollLog, ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + roll.ToString() + Environment.NewLine);
+                            try
+                            {
+                                File.AppendAllText(rollLog, ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + roll.ToString() + Environment.NewLine);
+                            }
+                            catch (Exception)
+                            {
+                                throw;
+                            }
                         }
                         else
                         {
                             j = numberDice;
                             for (i = 0; i < j; i++)
                             {
-                                string rollLog = getLoc.getLocation() + @"\" + @"\Logs\Rolls\" + logStrings.date + "rolls.txt";
                                 Random d6Roll = new Random();
                                 int roll = randomRoll.Next(1, 7);
                                 resultArea.Text += ("You rolled a: ") + roll.ToString() + Environment.NewLine;
-                                File.AppendAllText(rollLog, ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + roll.ToString() + Environment.NewLine);
+                                try
+                                {
+                                    File.AppendAllText(rollLog, ("\n You rolled ") + numberDice + ("d6 dice for a roll of: ") + roll.ToString() + Environment.NewLine);
+                                }
+                                catch (Exception)
+                                {
+                                    throw;
+                                }
                             }
                         }
                     }
@@ -479,7 +534,6 @@ namespace WindowsFormsApplication1
                             int roll = randomRoll.Next(1, 9);
                             resultArea.Text += ("You rolled a: ") + roll.ToString() + Environment.NewLine;
                             File.AppendAllText(rollLog, ("\n You rolled ") + numberDice + ("d8 dice for a roll of: ") + roll.ToString() + Environment.NewLine);
-
                         }
                         else
                         {
@@ -1165,6 +1219,7 @@ namespace WindowsFormsApplication1
             d100MinusMod.Checked = false;
             d100Mod.Clear();
         }
+
         //Delete Roll Log Button
         private void button10_Click(object sender, EventArgs e)
         {

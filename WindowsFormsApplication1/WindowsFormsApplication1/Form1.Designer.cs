@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form1
+    partial class mainWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainWindow));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.d4NumberDice = new System.Windows.Forms.TextBox();
@@ -453,6 +453,7 @@
             this.pictureBox7.Size = new System.Drawing.Size(41, 39);
             this.pictureBox7.TabIndex = 8;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox6
             // 
@@ -462,6 +463,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(41, 39);
             this.pictureBox6.TabIndex = 7;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox5
             // 
@@ -471,6 +473,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(41, 39);
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox4
             // 
@@ -480,6 +483,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(41, 39);
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox3
             // 
@@ -489,6 +493,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(41, 39);
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox2
             // 
@@ -498,6 +503,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(41, 39);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.button6_Click);
             // 
             // pictureBox1
             // 
@@ -507,6 +513,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(41, 39);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.button1_Click);
             // 
             // resultArea
             // 
@@ -618,7 +625,7 @@
             this.label10.TabIndex = 61;
             this.label10.Text = "Rolls";
             // 
-            // Form1
+            // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -682,7 +689,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "mainWindow";
             this.Text = "D&D Dice Roller v.01";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
