@@ -13,7 +13,7 @@ d12
 d20
 d100
 
-It also allows for positive and negative modifiers and displays the total roll.  
+It also allows for positive and negative modifiers and displays the total roll as well as logs it to a text file for later review.
 
 ------------------------------------
 ChangeLog:
